@@ -225,7 +225,7 @@ socket.on('send_message_response',function(payload){
 });
 
 function makeInviteButton(socket_id) {
-	var newHTML = '<button type=\'button\' class=\'btn btn-outline-primary\'>Invite</button>';
+	var newHTML = '<button type=\'button\' class=\'btn btn-outline-primary\'>Invite 招待する</button>';
 	var newNode = $(newHTML);
 	newNode.click(function(){
 		invite(socket_id);
@@ -234,7 +234,7 @@ function makeInviteButton(socket_id) {
 }
 
 function makeInvitedButton(socket_id) { 
-	var newHTML = '<button type=\'button\' class=\'btn btn-primary\'>Invited</button>';
+	var newHTML = '<button type=\'button\' class=\'btn btn-primary\'>Invited 招待された</button>';
 	var newNode = $(newHTML);
 	newNode.click(function(){
 		uninvite(socket_id);
@@ -243,7 +243,7 @@ function makeInvitedButton(socket_id) {
 }
 
 function makePlayButton(socket_id) {
-	var newHTML = '<button type=\'button\' class=\'btn btn-success\'>Lets Battle</button>';
+	var newHTML = '<button type=\'button\' class=\'btn btn-success\'>Lets Battle 戦いましょう</button>';
 	var newNode = $(newHTML);
 	newNode.click(function(){
 		game_start(socket_id);
@@ -252,7 +252,7 @@ function makePlayButton(socket_id) {
 }
 
 function makeEngagedButton() {
-	var newHTML = '<button type=\'button\' class=\'btn btn-danger\'>Fine! Lets battle!</button>';
+	var newHTML = '<button type=\'button\' class=\'btn btn-danger\'>Fine! Lets battle! ファイン！ 戦いましょう!</button>';
 	var newNode = $(newHTML);
 	return(newNode);
 }
@@ -315,7 +315,7 @@ else{
 	return;
 }
 		
-		$('#my_color').html('<h3 id="my_color">I am the '+my_color+' warrior</h3>');
+		$('#my_color').html('<h3 id="my_color">I am the '+my_color+' Japanese Anime (sister) warrior</h3>');
 	$('#my_color').append('<h4>It is the '+payload.game.whose_turn+' warrior\'s turn. Elapased time: <span id="elapsed"></span></h4>');
 	clearInterval(interval_timer);
 	interval_timer=setInterval(function(last_time){
